@@ -1,21 +1,21 @@
 <div class="example mb-3">
   <c-nav variant="tabs">
     <c-nav-item>
-      <a [active]="true" [cTabContent]="tabContent" [fragment]="fragment" routerLink="./" [tabPaneIdx]="0" cNavLink>
-        <c-icon class="me-2" name="cilMediaPlay"></c-icon>
+      <a [active]="true" [fragment]="fragment" [routerLink]="[]" cNavLink>
+        <svg cIcon class="me-2" name="cilMediaPlay"></svg>
         Preview
       </a>
     </c-nav-item>
     <c-nav-item>
       <a [href]="href" cNavLink target="_blank">
-        <c-icon class="me-2" name="cilCode"></c-icon>
+        <svg cIcon class="me-2" name="cilCode"></svg>
         Code
       </a>
     </c-nav-item>
   </c-nav>
-  <c-tab-content #tabContent="cTabContent" cRounded="bottom">
-    <c-tab-pane aria-labelledby="docs-code-preview" class="p-3 preview" role="tabpanel">
+  <div class="tab-content rounded-bottom">
+    <div class="tab-pane active show p-3 preview fade">
       <ng-content></ng-content>
-    </c-tab-pane>
-  </c-tab-content>
+    </div>
+  </div>
 </div>
